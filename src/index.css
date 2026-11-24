@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface-paper: #FAF8F4;
+  --ink-primary: #171614;
+  --ink-muted: #5D5A54;
+  --botanical: #0E7C61;
+  --crimson: #C42B3E;
+  --amber-depth: #C27018;
+  --cobalt: #1D4ED8;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--surface-paper);
+    color: var(--ink-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  code,
+  pre,
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums-strict {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1, 'zero' 1;
+}
+
+/* Editorial Monument Numerals */
+.monument-numeral {
+  font-family: 'Instrument Serif', Georgia, serif;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* Frosted Archival Vellum Glass */
+.vellum-glass {
+  background: rgba(250, 248, 244, 0.84);
+  backdrop-filter: blur(20px) saturate(135%);
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+  border: 1px solid rgba(23, 22, 20, 0.09);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 18px 42px -18px rgba(23, 22, 20, 0.16);
+}
+
+/* Submerged Dark Glass for Hover/Controls on Deep Floor */
+.abyss-glass {
+  background: rgba(28, 23, 20, 0.78);
+  backdrop-filter: blur(18px) saturate(130%);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  border: 1px solid rgba(250, 248, 244, 0.14);
+  color: #FAF8F4;
+  box-shadow: 0 20px 44px -14px rgba(0, 0, 0, 0.48);
+}
+
+/* Sumi-Obsidian Technical Backstage Drawer */
+.obsidian-drawer {
+  background: rgba(17, 17, 16, 0.94);
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+  border-left: 1px solid rgba(250, 248, 244, 0.12);
+  color: #F4F1EA;
+  box-shadow: -24px 0 64px -16px rgba(0, 0, 0, 0.55);
+}
+
+/* Physical Tear-Off Receipt Perforation */
+.receipt-perforation {
+  background-image: radial-gradient(circle at 8px 0, #ECEAE3 5px, transparent 5.5px);
+  background-size: 16px 10px;
+  background-repeat: repeat-x;
+}
+
+/* Tactile Cobalt Range Slider */
+input[type='range'].waterline-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type='range'].waterline-slider::-webkit-slider-runnable-track {
+  height: 3px;
+  background: rgba(23, 22, 20, 0.18);
+  border-radius: 999px;
+}
+
+input[type='range'].waterline-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -7.5px;
+  border-radius: 999px;
+  background: #1D4ED8;
+  border: 3px solid #FAF8F4;
+  box-shadow: 0 3px 12px rgba(29, 78, 216, 0.36);
+  transition: transform 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+input[type='range'].waterline-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.16);
+}
+
+/* Subtle Custom Scrollbars */
+.clean-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.clean-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.clean-scroll::-webkit-scrollbar-thumb {
+  background: rgba(23, 22, 20, 0.16);
+  border-radius: 999px;
+}
+
+.dark-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.dark-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark-scroll::-webkit-scrollbar-thumb {
+  background: rgba(250, 248, 244, 0.22);
+  border-radius: 999px;
+}
